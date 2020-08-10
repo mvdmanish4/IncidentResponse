@@ -123,7 +123,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="blank.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Investigation</span></a>
       </li>
@@ -354,11 +354,11 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="comment">Enter Command:</label>
+            <label for="comment">Enter Query:</label>
             <textarea class="form-control" rows="5" id="comment"></textarea>
           </div>
 
-          <button type="button" class="btn btn-primary" onclick="displayTable()">Search</button>
+          <button type="button" class="btn btn-primary" onclick="setTimeout(displayTable, 4000)">Search</button>
           <p>
             
           </p>
@@ -392,7 +392,7 @@
                 <td>suspecious_attack_process</td>
                 <td>Completed</td>
                 <td>2020/07/08</td>
-                <td><button type="button" class="btn btn-link" onclick="changeText('result_tr3')">Kill</button></td>
+                <td><button type="button" class="btn btn-link" onclick="changeText('result_tr3')">Pause</button></td>
               </tr>
             </tbody>
            </table>
@@ -454,7 +454,10 @@
   <script src="js/sb-admin-2.min.js"></script>
   <script>
     function changeText(rowName) {
-      var result_style = document.getElementById(rowName).style;
+      myVar = setTimeout(alertFunc, 4000);
+    }
+    function alertFunc() {
+      var result_style = document.getElementById('result_tr1').style;
       result_style.display = "none";
     }
   </script>
